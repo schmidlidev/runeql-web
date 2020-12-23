@@ -1,0 +1,3 @@
+[build]
+publish = "src/"
+command = "npx @2fd/graphdoc -e https://api.runeql.com/ -o ./src/schema"
