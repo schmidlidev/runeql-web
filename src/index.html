@@ -6,13 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>RuneQL | GraphQL API for Old School RuneScape</title>
-  <script>
-    function copy() {
-      navigator.clipboard.writeText(
-        `curl -X POST -H "Content-Type: application/json" --data '{"query": "{ item(id: 4151) { name, examine, price } }" }' https://api.runeql.com/`
-      );
-    }
-  </script>
 </head>
 
 <body class="bg-white">
@@ -65,12 +58,13 @@
           Or from the terminal,
         </p>
         <div class="bg-gray-200 border border-black flex">
-          <p id="curl" class="flex-1 ml-2 py-2 font-mono">
+          <p id="curlExample" class="flex-1 ml-2 py-2 font-mono">
             curl -X POST -H "Content-Type: application/json" --data '{
             "query": "{ item(id: 4151) { name, examine, price } }" }'
             https://api.runeql.com/
           </p>
-          <button onclick="copy()" class="justify-self-center px-2 hover:bg-gray-400">
+          <button onclick="navigator.clipboard.writeText(document.getElementById('curlExample').innerText)"
+            class="justify-self-center px-2 hover:bg-gray-400">
             <img src="img/copy-icon.png" alt="Copy icon" />
           </button>
         </div>
