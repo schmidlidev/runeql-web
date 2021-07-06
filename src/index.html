@@ -1,190 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>RuneQL</title>
-    <script>
-      function copy() {
-        navigator.clipboard.writeText(
-          `curl -X POST -H "Content-Type: application/json" --data '{"query": "{ item(id: 4151) { name, examine, price } }" }' https://api.runeql.com/`
-        );
-      }
-    </script>
-  </head>
-  <body class="bg-white">
-    <div class="flex justify-center pb-8">
-      <div class="container divide-y-2 divide-solid">
-        <div class="container">
-          <div class="text-center text-5xl pt-8">
-            <span>Rune</span><span class="text-red-700">QL</span>
-          </div>
-          <p class="text-center text-xl text-gray-500 pt-4 pb-8">
-            A GraphQL API for Old School RuneScape data
-          </p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>RuneQL | GraphQL API for Old School RuneScape</title>
+  <script>
+    function copy() {
+      navigator.clipboard.writeText(
+        `curl -X POST -H "Content-Type: application/json" --data '{"query": "{ item(id: 4151) { name, examine, price } }" }' https://api.runeql.com/`
+      );
+    }
+  </script>
+</head>
+
+<body class="bg-white">
+  <div class="flex justify-center pb-8">
+    <div class="container divide-y-2 divide-solid">
+      <div class="container">
+        <div class="text-center text-5xl pt-8">
+          <span>Rune</span><span class="text-red-700">QL</span>
         </div>
-        <div class="py-4">
-          <p class="text-center text-4xl font-semibold pb-2">
-            Ask and you shall receive
-          </p>
-          <p class="text-center text-xl text-gray-500">
-            With GraphQL, responses contain exactly and only what you ask for.
-          </p>
-          <div class="pt-4 grid grid-cols-2 gap-x-2">
-            <div>
-              <p class="text-2xl text-gray-500 pb-2">
-                Request >
-                <a href="https://api.runeql.com/">https://api.runeql.com/</a>
-              </p>
-              <img
-                src="img/request.png"
-                alt="Example HTTP request content"
-                class="shadow-xl"
-              />
-            </div>
-            <div>
-              <p class="text-2xl text-gray-500 pb-2">Response</p>
-              <img
-                src="img/response.png"
-                alt="Example HTTP response content"
-                class="shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="py-4">
-          <p class="text-center text-4xl font-semibold pb-2">Features</p>
-          <p class="text-center text-2xl text-gray-500 pt-2 pb-2">
-            This section coming soon.
-          </p>
-        </div>
-        <div class="py-4">
-          <p class="text-center text-4xl font-semibold pb-2">Try it</p>
-          <div class="flex justify-center">
-            <div
-              class="border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-2 shadow-md transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
-            >
-              <a
-                href="https://api.runeql.com"
-                target="_blank"
-                class="self-center"
-                >Go to the Interactive Web UI</a
-              >
-            </div>
-          </div>
-          <p class="text-center text-2xl text-gray-500 pt-4 pb-2">
-            Or from the terminal,
-          </p>
-          <div class="bg-gray-200 border border-black flex">
-            <p id="curl" class="flex-1 ml-2 py-2 font-mono">
-              curl -X POST -H "Content-Type: application/json" --data '{
-              "query": "{ item(id: 4151) { name, examine, price } }" }'
-              https://api.runeql.com/
+        <p class="text-center text-xl text-gray-500 pt-4 pb-8">
+          A GraphQL API for Old School RuneScape data
+        </p>
+      </div>
+      <div class="py-4">
+        <p class="text-center text-4xl font-semibold pb-2">
+          Ask and you shall receive
+        </p>
+        <p class="text-center text-xl text-gray-500">
+          With GraphQL, responses contain exactly and only what you ask for.
+        </p>
+        <div class="pt-4 grid grid-cols-2 gap-x-2">
+          <div>
+            <p class="text-2xl text-gray-500 pb-2">
+              Request >
+              <a href="https://api.runeql.com/">https://api.runeql.com/</a>
             </p>
-            <button
-              onclick="copy()"
-              class="justify-self-center px-2 hover:bg-gray-400"
-            >
-              <img src="img/copy-icon.png" alt="Copy icon" />
-            </button>
+            <img src="img/request.png" alt="Example HTTP request content" class="shadow-xl" />
+          </div>
+          <div>
+            <p class="text-2xl text-gray-500 pb-2">Response</p>
+            <img src="img/response.png" alt="Example HTTP response content" class="shadow-xl" />
           </div>
         </div>
-        <div class="py-4">
-          <p class="text-center text-4xl font-semibold pb-2">Documentation</p>
-          <p class="text-center text-2xl text-gray-500 pt-4 pb-2">
-            Schema documentation is automatically generated with
-            <a href="https://github.com/2fd/graphdoc" class="font-semibold"
-              >graphdoc</a
-            >.
+      </div>
+      <div class="py-4">
+        <p class="text-center text-4xl font-semibold pb-2">Features</p>
+        <p class="text-center text-2xl text-gray-500 pt-2 pb-2">
+          This section coming soon.
+        </p>
+      </div>
+      <div class="py-4">
+        <p class="text-center text-4xl font-semibold pb-2">Try it</p>
+        <div class="flex justify-center">
+          <div
+            class="border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-2 shadow-md transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline">
+            <a href="https://api.runeql.com" target="_blank" class="self-center">Go to the Interactive Web UI</a>
+          </div>
+        </div>
+        <p class="text-center text-2xl text-gray-500 pt-4 pb-2">
+          Or from the terminal,
+        </p>
+        <div class="bg-gray-200 border border-black flex">
+          <p id="curl" class="flex-1 ml-2 py-2 font-mono">
+            curl -X POST -H "Content-Type: application/json" --data '{
+            "query": "{ item(id: 4151) { name, examine, price } }" }'
+            https://api.runeql.com/
           </p>
-          <div class="flex justify-center">
-            <div
-              class="border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-2 shadow-md transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
-            >
-              <a href="schema/" target="_blank" class="self-center"
-                >Go to the Online Documentation</a
-              >
+          <button onclick="copy()" class="justify-self-center px-2 hover:bg-gray-400">
+            <img src="img/copy-icon.png" alt="Copy icon" />
+          </button>
+        </div>
+      </div>
+      <div class="py-4">
+        <p class="text-center text-4xl font-semibold pb-2">Documentation</p>
+        <p class="text-center text-2xl text-gray-500 pt-4 pb-2">
+          Schema documentation is automatically generated with
+          <a href="https://github.com/2fd/graphdoc" class="font-semibold">graphdoc</a>.
+        </p>
+        <div class="flex justify-center">
+          <div
+            class="border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-2 shadow-md transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline">
+            <a href="schema/" target="_blank" class="self-center">Go to the Online Documentation</a>
+          </div>
+        </div>
+      </div>
+      <div class="py-4">
+        <p class="text-center text-4xl font-semibold pb-4">Source Code</p>
+        <p class="text-center text-2xl text-gray-500">
+          RuneQL is open source.
+        </p>
+        <div class="flex justify-center pt-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="shadow-md">
+              <a href="https://github.com/schmidlidev/runeql"><img
+                  src="https://gh-card.dev/repos/schmidlidev/runeql.svg" alt="runeql GitHub card" /></a>
+            </div>
+            <div class="shadow-md">
+              <a href="https://github.com/schmidlidev/runeql-data"><img
+                  src="https://gh-card.dev/repos/schmidlidev/runeql-data.svg" alt="runeql-data GitHub card" /></a>
+            </div>
+            <div class="shadow-md">
+              <a href="https://github.com/schmidlidev/runeql-tools"><img
+                  src="https://gh-card.dev/repos/schmidlidev/runeql-tools.svg" alt="runeql-tools GitHub card" /></a>
+            </div>
+            <div class="shadow-md">
+              <a href="https://github.com/schmidlidev/runeql-web"><img
+                  src="https://gh-card.dev/repos/schmidlidev/runeql-web.svg" alt="runeql-web GitHub card" /></a>
             </div>
           </div>
         </div>
-        <div class="py-4">
-          <p class="text-center text-4xl font-semibold pb-4">Source Code</p>
-          <p class="text-center text-2xl text-gray-500">
-            RuneQL is open source.
-          </p>
-          <div class="flex justify-center pt-4">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="shadow-md">
-                <a href="https://github.com/schmidlidev/runeql"
-                  ><img
-                    src="https://gh-card.dev/repos/schmidlidev/runeql.svg"
-                    alt="runeql GitHub card"
-                /></a>
-              </div>
-              <div class="shadow-md">
-                <a href="https://github.com/schmidlidev/runeql-data"
-                  ><img
-                    src="https://gh-card.dev/repos/schmidlidev/runeql-data.svg"
-                    alt="runeql-data GitHub card"
-                /></a>
-              </div>
-              <div class="shadow-md">
-                <a href="https://github.com/schmidlidev/runeql-tools"
-                  ><img
-                    src="https://gh-card.dev/repos/schmidlidev/runeql-tools.svg"
-                    alt="runeql-tools GitHub card"
-                /></a>
-              </div>
-              <div class="shadow-md">
-                <a href="https://github.com/schmidlidev/runeql-web"
-                  ><img
-                    src="https://gh-card.dev/repos/schmidlidev/runeql-web.svg"
-                    alt="runeql-web GitHub card"
-                /></a>
-              </div>
+      </div>
+      <div class="py-4">
+        <p class="text-center text-4xl font-semibold pb-2">Special Thanks</p>
+        <p class="text-center text-2xl text-gray-500">
+          RuneQL is made possible by
+        </p>
+        <div class="flex justify-center pt-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <a href="https://github.com/osrsbox/osrsbox-db"><img
+                  src="https://gh-card.dev/repos/osrsbox/osrsbox-db.svg" class="shadow-md"
+                  alt="osrsbox-db GitHub card" /></a>
             </div>
-          </div>
-        </div>
-        <div class="py-4">
-          <p class="text-center text-4xl font-semibold pb-2">Special Thanks</p>
-          <p class="text-center text-2xl text-gray-500">
-            RuneQL is made possible by
-          </p>
-          <div class="flex justify-center pt-4">
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <a href="https://github.com/osrsbox/osrsbox-db"
-                  ><img
-                    src="https://gh-card.dev/repos/osrsbox/osrsbox-db.svg"
-                    class="shadow-md"
-                    alt="osrsbox-db GitHub card"
-                /></a>
-              </div>
-              <div class="flex justify-center bg-wiki shadow-md">
-                <a href="https://oldschool.runescape.wiki/"
-                  ><img
-                    src="https://oldschool.runescape.wiki/images/b/bc/Wiki.png?7d898"
-                    alt="Old School RuneScape Wiki Logo"
-                /></a>
-              </div>
+            <div class="flex justify-center bg-wiki shadow-md">
+              <a href="https://oldschool.runescape.wiki/"><img
+                  src="https://oldschool.runescape.wiki/images/b/bc/Wiki.png?7d898"
+                  alt="Old School RuneScape Wiki Logo" /></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="bg-dark py-2">
-      <div class="flex justify-center space-x-16">
-        <a href="https://github.com/schmidlidev"
-          ><img src="img/GitHub-Mark-Light-64px.png" alt="GitHub Logo"
-        /></a>
-        <a href="https://discord.gg/BsqnhWZTz8">
-          <img src="img/Discord-Logo-White-64px.png" alt="Discord Logo" />
-        </a>
-        <a href="mailto:schmidlidev@gmail.com" alt="Email icon">
-          <img src="img/mail64.png" />
-        </a>
-      </div>
+  </div>
+  <div class="bg-dark py-2">
+    <div class="flex justify-center space-x-16">
+      <a href="https://github.com/schmidlidev"><img src="img/GitHub-Mark-Light-64px.png" alt="GitHub Logo" /></a>
+      <a href="https://discord.gg/BsqnhWZTz8">
+        <img src="img/Discord-Logo-White-64px.png" alt="Discord Logo" />
+      </a>
+      <a href="mailto:schmidlidev@gmail.com" alt="Email icon">
+        <img src="img/mail64.png" />
+      </a>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
